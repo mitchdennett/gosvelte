@@ -1,0 +1,17 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{{template "title"}}</title>
+		<link rel="icon" type="image/png" href="static/favicon.png" />
+		<link rel="stylesheet" href="static/global.css" />
+		<link rel="stylesheet" href="static/build/bundle.css" />
+	</head>
+	<body id="app">
+		{{template "body"}}
+		<footer>Made with Go</footer>
+	</body>
+	<script defer src="static/build/bundle.js"></script>
+</html>
+{{end}}
