@@ -21,6 +21,7 @@ func main() {
 	}
 
 	router.Get("/", handler.Handler{Env: env, H: handler.Index})
+	router.Get("/blog", handler.Handler{Env: env, H: handler.Blog})
 
 	log.Fatal(http.ListenAndServe(":8000", router))
 

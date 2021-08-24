@@ -119,3 +119,12 @@ func Index(e *Env, w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 	tmpl.ExecuteTemplate(w, "base", nil)
 	return nil
 }
+
+func Blog(e *Env, w http.ResponseWriter, r *http.Request, ps httprouter.Params) error {
+	lp := filepath.Join("templates", "base.html")
+	fp := filepath.Join("templates", "blog.html")
+
+	tmpl, _ := template.ParseFiles(lp, fp)
+	tmpl.ExecuteTemplate(w, "base", nil)
+	return nil
+}
